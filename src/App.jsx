@@ -32,6 +32,7 @@ const Wrapper = styled.div`
   overflow: auto;
   background-color: #1e1e1e;
 `;
+
 function App() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);

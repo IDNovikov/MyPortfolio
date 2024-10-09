@@ -4,11 +4,6 @@ import { Tittle } from "../UI/textTittle";
 import { Regular } from "../UI/textRegular";
 import { Medium } from "../UI/textMedium";
 import { Stack } from "../UI/Stack";
-import { LinkButton } from "../UI/linkButton";
-import telegram from "../assets/Telegram.svg";
-import mail from "../assets/Mail.svg";
-import git from "../assets/Git.svg";
-import { Button } from "../UI/Button";
 import { Card } from "../UI/Card";
 export const Case = () => {
   return (
