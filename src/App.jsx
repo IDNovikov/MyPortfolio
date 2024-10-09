@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import styled, { createGlobalStyle } from "styled-components";
+import "./App.css";
+import { Main } from "./components/Main";
+import { Case } from "./components/Case";
 
+const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family:"Krasnodar" ;
+    src: url('/fonts/KrasnodarGroteskTrial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:"Roboto Regular" ;
+    src: url('/fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family:"Roboto Medium" ;
+    src: url('/fonts/RobotoMono-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  `;
+
+const Wrapper = styled.div`
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  padding: 120px 24px;
+  overflow: auto;
+  background-color: #1e1e1e;
+`;
 function App() {
-  const [count, setCount] = useState(0)
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GlobalStyle />
+      <Wrapper>
+        <Main />
+        <Case />
+      </Wrapper>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
