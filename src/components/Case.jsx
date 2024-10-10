@@ -4,17 +4,31 @@ import { Regular } from "../UI/textRegular";
 import { Medium } from "../UI/textMedium";
 import { Stack } from "../UI/Stack";
 import { Card } from "../UI/Card";
+import { Arrow } from "../UI/Arrow";
+
 const Style = styled.div`
+  position: relative;
+  height: max-content;
   overflow-y: auto;
   padding: 120px 24px;
   display: flex;
   flex-direction: column;
   border-left: 2px solid rgba(255, 255, 255, 4%);
+  scroll-snap-align: start;
+  @media screen and (min-width: 960px) {
+    height: 100vh;
+    padding: 120px 24px;
+  }
 `;
 export const Case = () => {
+  console.log(window.innerWidth);
   return (
     <Style>
-      <Regular color="white" paragraph={true} margin="10px 0">
+      {window.innerWidth < 959 && (
+        <Arrow transform="rotate(180deg)" top={"50px"} />
+      )}
+
+      <Regular color="white" paragraph={true} margin="0px 0 10px 0">
         Имею общий опыт frontend разработки с ноября 2022 года, включая опыт ~1
         года работы в команде проекта интерактивного детского образовательного
         сервиса chevostik.ru. В процессе работы над сервисом основным

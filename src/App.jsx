@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import "./App.css";
 import { Main } from "./components/Main";
 import { Case } from "./components/Case";
+import { Spinner } from "./UI/Spinner";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -28,10 +29,14 @@ const GlobalStyle = createGlobalStyle`
 const Wrapper = styled.div`
   width: 100vw;
   height: calc(var(--vh, 1vh) * 100);
-  overflow: hidden;
+  overflow-y: scroll;
   background-color: #1e1e1e;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
+  scroll-snap-type: y mandatory;
+  @media screen and (min-width: 960px) {
+    overflow: hidden;
+  }
 `;
 
 function App() {
@@ -40,11 +45,12 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
+      <Spinner />
+      {/* <GlobalStyle />
       <Wrapper>
         <Main />
         <Case />
-      </Wrapper>
+      </Wrapper> */}
     </>
   );
 }

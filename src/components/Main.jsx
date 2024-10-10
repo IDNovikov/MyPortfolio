@@ -8,11 +8,15 @@ import telegram from "../assets/Telegram.svg";
 import mail from "../assets/Mail.svg";
 import git from "../assets/Git.svg";
 import { Button } from "../UI/Button";
+import { Arrow } from "../UI/Arrow";
 
 const Style = styled.div`
+  position: relative;
+  height: 100vh;
   padding: 120px 24px;
   display: flex;
   flex-direction: column;
+  scroll-snap-align: start;
 `;
 const Row = styled.div`
   margin: 20px 0;
@@ -57,6 +61,9 @@ export const Main = () => {
           <img src={mail} />
         </LinkButton>
       </Row>
+      {window.innerWidth < 959 && (
+        <Arrow transform={"rotate(0deg)"} bottom={"10vh"} />
+      )}
     </Style>
   );
 };
