@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Tittle = styled.text`
+export const Tittle = styled.span`
   font-family: "Krasnodar";
   pointer-events: none;
   color: ${(props) => props.color};

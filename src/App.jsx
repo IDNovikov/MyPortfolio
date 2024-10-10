@@ -28,9 +28,10 @@ const GlobalStyle = createGlobalStyle`
 const Wrapper = styled.div`
   width: 100vw;
   height: calc(var(--vh, 1vh) * 100);
-  padding: 120px 24px;
-  overflow: auto;
+  overflow: hidden;
   background-color: #1e1e1e;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
 `;
 
 function App() {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Style = styled.text`
+const Style = styled.span`
   font-family: "Roboto Regular";
   pointer-events: none;
   color: ${(props) => props.color};

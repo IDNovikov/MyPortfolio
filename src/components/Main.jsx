@@ -10,6 +10,7 @@ import git from "../assets/Git.svg";
 import { Button } from "../UI/Button";
 
 const Style = styled.div`
+  padding: 120px 24px;
   display: flex;
   flex-direction: column;
 `;

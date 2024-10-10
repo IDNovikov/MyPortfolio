@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Medium = styled.text`
+export const Medium = styled.span`
   font-family: "Roboto Medium";
   pointer-events: none;
   color: ${(props) => props.color};
