@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
-export const Spinner = styled.span`
-  width: 48px;
-  height: 48px;
+const SpinnerStyle = styled.div`
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
   display: inline-block;
-  position: relative;
-  border: 3px solid;
-  border-color: #fff #fff transparent transparent;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  border: 5px solid;
+  border-color: #88efff #88efff transparent transparent;
   box-sizing: border-box;
-  animation: rotation 1s linear infinite;
+  animation: rotation 2s linear infinite;
 
   &::after,
   &::before {
@@ -21,20 +24,20 @@ export const Spinner = styled.span`
     top: 0;
     bottom: 0;
     margin: auto;
-    border: 3px solid;
-    border-color: transparent transparent #ff3d00 #ff3d00;
-    width: 40px;
-    height: 40px;
+    border: 5px solid;
+    border-color: transparent transparent #fff600 #fff600;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     box-sizing: border-box;
-    animation: rotationBack 0.5s linear infinite;
+    animation: rotationBack 1s linear infinite;
     transform-origin: center center;
   }
   &::before {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
     border-color: #fff #fff transparent transparent;
-    animation: rotation 1.5s linear infinite;
+    animation: rotation 2.5s linear infinite;
   }
 
   @keyframes rotation {
@@ -54,3 +57,20 @@ export const Spinner = styled.span`
     }
   }
 `;
+const Wrapper = styled.div`
+  position: absolute;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  background-color: #1e1e1e;
+`;
+export const Spinner = () => {
+  return (
+    <Wrapper>
+      <SpinnerStyle />
+    </Wrapper>
+  );
+};

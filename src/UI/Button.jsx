@@ -2,6 +2,7 @@ import styled from "styled-components";
 import arrow from "../assets/Arrow.svg";
 const Style = styled.a`
   pointer-events: all;
+  text-decoration: none;
   min-width: 42px;
   min-height: 17px;
   width: max-content;
@@ -19,7 +20,7 @@ const Style = styled.a`
 `;
 export const Button = ({ children, margin }) => {
   return (
-    <Style margin={margin}>
+    <Style margin={margin} download href={"./files/Portfolio_Novikov.pdf"}>
       {children}
       <img src={arrow} alt={"Стрелка"} />
     </Style>

@@ -67,7 +67,7 @@ export const Case = () => {
           • модернизация
         </Regular>
 
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
           <Stack margin={"10px"}>
             <Regular color="black" opacity={"70%"}>
               React
@@ -108,7 +108,7 @@ export const Case = () => {
         <Regular color="white" opacity={"70%"} margin="5px 0 5px 8px">
           • взаимодействие с реляционной БД
         </Regular>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
           <Stack margin={"10px"}>
             <Regular color="black" opacity={"70%"}>
               React
@@ -160,7 +160,7 @@ export const Case = () => {
         <Regular color="white" opacity={"70%"} margin="5px 0 5px 8px">
           • деплой
         </Regular>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
           <Stack margin={"10px"}>
             <Regular color="black" opacity={"70%"}>
               React

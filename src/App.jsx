@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import "./App.css";
 import { Main } from "./components/Main";
@@ -42,15 +42,16 @@ const Wrapper = styled.div`
 function App() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
-
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => setLoading(false), 1200);
   return (
     <>
-      <Spinner />
-      {/* <GlobalStyle />
+      <GlobalStyle />
       <Wrapper>
+        {loading && <Spinner />}
         <Main />
         <Case />
-      </Wrapper> */}
+      </Wrapper>
     </>
   );
 }

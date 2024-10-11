@@ -32,7 +32,7 @@ export const Main = () => {
       <Tittle color="white" size="32px">
         Илья Новиков
       </Tittle>
-      <Medium color="white" size="20px" margin="15px 0">
+      <Medium color="white" size="20px" margin="25px 0">
         Frontend Engineer
       </Medium>
       <Regular
@@ -40,12 +40,12 @@ export const Main = () => {
         opacity={"70%"}
         paragraph={true}
         size="16px"
-        margin="15px 0"
+        margin="25px 0"
       >
         Я увлечен созданием целостного цифрового опыта и преобразованием сложных
         задач в элегантные решения.
       </Regular>
-      <Button margin="15px 0">
+      <Button margin="35px 0">
         <Regular color="black" margin={"10px 20px"}>
           Смотреть резюме
         </Regular>
